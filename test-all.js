@@ -2,6 +2,9 @@
 require('./myMap');
 require('./myFilter');
 require('./myReduce');
+require('./myFlat');
+require('./myForEach');
+require('./myFlatMap');
 
 console.log('='.repeat(50));
 console.log('ARRAY POLYFILLS - TEST SUITE');
@@ -62,6 +65,29 @@ console.log('Input:', numbers);
 console.log(
   'Result:',
   numbers.myReduce((acc, x) => acc * x, 1),
+);
+
+console.log('\n✓ Flat - Flatten nested arrays (depth 1):');
+const nestedArray = [1, [2, 3], [4, [5, 6]]];
+console.log('Input:', nestedArray);
+console.log('Result (depth 1):', nestedArray.myFlat(1));
+
+console.log('\n✓ Flat - Flatten nested arrays (depth 2):');
+const nestedArray2 = [1, [2, 3], [4, [5, 6]]];
+console.log('Input:', nestedArray2);
+console.log('Result (depth 2):', nestedArray2.myFlat(2));
+
+console.log('\n✓ ForEach - Execute function for each element:');
+console.log('Input:', [10, 20, 30]);
+console.log('Output:');
+[10, 20, 30].myForEach((x) => console.log('  -', x));
+
+console.log('\n✓ FlatMap - Map then flatten with depth 1:');
+const flatMapInput = [1, 2, 3];
+console.log('Input:', flatMapInput);
+console.log(
+  'Result:',
+  flatMapInput.myFlatMap((x) => [x, x * 2]),
 );
 
 console.log('\n' + '='.repeat(50));

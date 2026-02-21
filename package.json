@@ -5,9 +5,12 @@
   "main": "polyfills/myMap.js",
   "scripts": {
     "test": "node test-all.js",
-    "test:map": "node polyfills/myMap.js",
-    "test:filter": "node polyfills/myFilter.js",
-    "test:reduce": "node polyfills/myReduce.js"
+    "test:map": "node myMap.js",
+    "test:filter": "node myFilter.js",
+    "test:reduce": "node myReduce.js",
+    "test:flat": "node myFlat.js",
+    "test:forEach": "node myForEach.js",
+    "test:flatMap": "node myFlatMap.js"
   },
   "keywords": [
     "array",
@@ -15,6 +18,9 @@
     "map",
     "filter",
     "reduce",
+    "flat",
+    "flatMap",
+    "forEach",
     "javascript",
     "educational"
   ],
