@@ -1,0 +1,25 @@
+{
+  "name": "js-polyfills",
+  "version": "1.0.0",
+  "description": "Custom implementations of common JavaScript methods and features",
+  "main": "polyfills/myMap.js",
+  "scripts": {
+    "test": "node test-all.js",
+    "test:map": "node polyfills/myMap.js",
+    "test:filter": "node polyfills/myFilter.js",
+    "test:reduce": "node polyfills/myReduce.js"
+  },
+  "keywords": [
+    "array",
+    "polyfill",
+    "map",
+    "filter",
+    "reduce",
+    "javascript",
+    "educational"
+  ],
+  "author": "WebCohort26",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
